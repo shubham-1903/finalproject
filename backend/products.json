@@ -1,0 +1,30 @@
+[
+{
+    "productid": 10,
+    "productname": "Keyboard",
+    "modelyear": 2020,
+    "price": 1000,
+    "description": "keyboard description"
+},
+{
+    "productid": 11,
+    "productname": "Laptop",
+    "modelyear": 2021,
+    "price": 25000,
+    "description": "Laptop description"
+},
+{
+    "productid": 12,
+    "productname": "Inverter",
+    "modelyear": 2022,
+    "price": 10000,
+    "description": "Inverter description"
+},
+{
+    "productid": 13,
+    "productname": "Desktop",
+    "modelyear": 2018,
+    "price": 15000,
+    "description": "Desktop description"
+}
+]
