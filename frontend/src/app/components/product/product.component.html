@@ -1,5 +1,16 @@
 <p>product works!</p>
-<button (click)="getAllProduct()">GET PRODUCT</button>
+<!-- <button (click)="getAllProduct()">GET PRODUCT</button>
 <div *ngFor="let prod of products">
   {{prod.productname}}
+</div> -->
+<div class="container">
+  <div [id]="'card'" class="card" *ngFor="let prod of products">
+    <div [id]="'img'" class="image"></div>
+    <p [id]="'title'" class="productname">{{prod.productname}}</p>
+    <div [id]="'price'" class="price">{{prod.price}}</div>
+    <div class="button">
+      <button routerLink="/products/show/{{prod.productid}}">Explore</button>
+      <button>Edit</button>
+    </div>
+  </div>
 </div>

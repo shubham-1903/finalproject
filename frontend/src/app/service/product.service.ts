@@ -11,4 +11,8 @@ export class ProductService {
   getAllProduct(){
     return this.http.get<Product[]>('/api/products')
   }
+  getProductDetailsByID(id:any){
+    let url = '/api/products'
+    return this.http.get<Product>(`${url}/${id}`)
+  }
 }

@@ -1,1 +1,15 @@
-<p>product-list works!</p>
+<h1>Product Details</h1>
+<div class="container">
+  <div [id]="'card'" class="card">
+    <div [id]="'img'" class="image"></div>
+    <p [id]="'title'" class="productname">{{product.productname}}</p>
+    <div [id]="'price'" class="price">{{product.price}}</div>
+    <div class="description">
+      <p>{{product.description}}</p>
+    </div>
+    <div class="button">
+      <button routerLink="/products">Back</button>
+      <button>Edit</button>
+    </div>
+  </div>
+</div>

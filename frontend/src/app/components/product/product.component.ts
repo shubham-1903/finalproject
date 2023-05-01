@@ -10,8 +10,12 @@ import { ProductService } from 'src/app/service/product.service';
 export class ProductComponent {
   products!:Product[]
   constructor(private productService:ProductService){}
+  ngOnInit(){
+    this.getAllProduct();
+  }
   getAllProduct(){
     this.productService.getAllProduct().subscribe((data)=>{
+      console.log(data)
       this.products = data
     })
   }
