@@ -1,6 +1,13 @@
 <p>product-edit works!</p>
-<div>
-  <input type="text" name="productname" id="">
-  <input type="text" name="price" id="">
-  <input type="text" name="description" id="">
-</div>
+<!-- <form (ngSubmit)="onSubmit()" #form="ngForm">
+</form> -->
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <input type="text" name="productname" id="productname" formControlName="productname" placeholder="productname"
+  [value]="productname"
+  >
+  <input type="text" name="price" id="price" formControlName="price" placeholder="price"
+  [value]="price">
+  <input type="text" name="description" id="description" formControlName="description" placeholder="description"
+  [value]="description">
+  <button type="submit">Edit</button>
+</form>

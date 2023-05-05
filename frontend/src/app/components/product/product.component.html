@@ -13,13 +13,13 @@
   {{prod.productname}}
 </div> -->
 <div class="container">
-  <div [id]="'card'" class="card" *ngFor="let prod of products">
+  <div [id]="'card'" class="card" *ngFor="let prod of products" #card>
     <div [id]="'img'" class="image"></div>
     <p [id]="'title'" class="productname">{{prod.productname}}</p>
     <div [id]="'price'" class="price">{{prod.price}}</div>
     <div class="button">
       <button routerLink="/products/show/{{prod.productid}}">Explore</button>
-      <button>Edit</button>
+      <button routerLink="/products/edit/{{prod.productid}}">Edit</button>
     </div>
   </div>
 </div>

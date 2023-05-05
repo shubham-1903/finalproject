@@ -3,5 +3,5 @@ export class Product{
   productname!:string;
   modelyear!:number;
   price!:number;
-  description!:number;
+  description!:string;
 }

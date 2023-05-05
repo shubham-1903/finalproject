@@ -19,4 +19,8 @@ export class ProductService {
     let url = '/api/products/range'
     return this.http.get<Product[]>(`${url}?minPrice=${min}&maxPrice=${max}`)
   }
+  updateProductDetails(id:any,details:any){
+    let url = '/api/products'
+    return this.http.put(`${url}/${id}`,details)
+  }
 }

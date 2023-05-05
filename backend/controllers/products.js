@@ -41,6 +41,7 @@ export const createProduct = async(req,res) => {
 }
 
 export const updateProduct = async(req,res) => {
+    console.log(req.body)
     try {
         const {productid} = req.params;
         const updateProductDetails = await product.findOneAndUpdate(
