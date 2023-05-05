@@ -1,6 +1,7 @@
 
 import dotenv from 'dotenv'
 import express from 'express'
+import cors from 'cors'
 import mongoose from 'mongoose'
 import bodyParser from 'body-parser'
 import productsRouter from './routes/products.js';
@@ -9,7 +10,7 @@ dotenv.config()
 const app = express();
 const port = 5500
 app.use(bodyParser.json());
-
+app.use(cors())
 // mongoose.connect('mongodb://localhost:27017/webinardb').then(()=>{
 //   console.log('connected to db..');
 // }).catch(err=>console.log(err))

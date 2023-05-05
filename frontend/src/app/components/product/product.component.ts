@@ -19,4 +19,12 @@ export class ProductComponent {
       this.products = data
     })
   }
+  getFilteredProduct(min:string,max:string){
+    console.log("filtered product called...");
+    console.log(min);
+    this.productService.filterProductByPriceRange(min,max).subscribe((data)=>{
+      this.products = data
+      console.log(data)
+    })
+  }
 }

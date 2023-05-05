@@ -1,4 +1,13 @@
 <p>product works!</p>
+<div>
+  <div>Filter</div>
+  <div>Price</div>
+  <div>
+    <input type="text" name="min" id="min" placeholder="$min" #min >
+    <input type="text" name="max" id="max" placeholder="$max" #max >
+    <input type="button" value="GO" (click)="getFilteredProduct(min.value,max.value)">
+  </div>
+</div>
 <!-- <button (click)="getAllProduct()">GET PRODUCT</button>
 <div *ngFor="let prod of products">
   {{prod.productname}}

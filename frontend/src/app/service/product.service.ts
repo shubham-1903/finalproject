@@ -15,4 +15,8 @@ export class ProductService {
     let url = '/api/products'
     return this.http.get<Product>(`${url}/${id}`)
   }
+  filterProductByPriceRange(min:string,max:string){
+    let url = '/api/products/range'
+    return this.http.get<Product[]>(`${url}?minPrice=${min}&maxPrice=${max}`)
+  }
 }
