@@ -16,6 +16,7 @@ export class ProductCreateComponent {
     modelyear:['',Validators.required],
     description:['',Validators.required]
   })
+  productData!:any
   onSubmit(){
     let data = {
       productid:Number(this.createForm.value.productid),
@@ -26,8 +27,14 @@ export class ProductCreateComponent {
     }
     this.productService.createProduct(data).subscribe(data=>{
       console.log(data)
+      this.productData = data
     })
-    console.log(data)
-    console.log(this.createForm);
+    // console.log(data)
+    // console.log(this.createForm);
+    console.log(this.productData)
+    if(this.productData){
+      console.log("hii")
+      console.log(this.productData.success)
+    }
   }
 }

@@ -27,4 +27,8 @@ export class ProductService {
     let url = '/api/products'
     return this.http.post(url,productdetails)
   }
+  deleteProduct(id:any){
+    let url = '/api/products'
+    return this.http.delete(`${url}/${id}`)
+  }
 }

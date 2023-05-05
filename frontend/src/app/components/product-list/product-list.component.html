@@ -1,15 +1,18 @@
 <h1>Product Details</h1>
-<div class="container">
+<div class="container" *ngIf="product!==undefined">
   <div [id]="'card'" class="card">
     <div [id]="'img'" class="image"></div>
-    <p [id]="'title'" class="productname">{{product.productname}}</p>
-    <div [id]="'price'" class="price">{{product.price}}</div>
+    <p [id]="'title'" class="productname">{{product?.productname}}</p>
+    <div [id]="'price'" class="price">{{product?.price}}</div>
     <div class="description">
-      <p>{{product.description}}</p>
+      <p>{{product?.description}}</p>
     </div>
     <div class="button">
       <button routerLink="/products">Back</button>
-      <button>Edit</button>
+      <button (click)="deleteProduct()">Delete</button>
     </div>
   </div>
+</div>
+<div *ngIf="product===undefined" class="loading">
+  Loading...
 </div>

@@ -48,3 +48,11 @@ button:hover{
 .price::before{
   content: '$';
 }
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  color: chartreuse;
+  font-family: 'Nunito Sans', sans-serif;
+}
