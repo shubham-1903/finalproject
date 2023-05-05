@@ -8,13 +8,17 @@ import { ProductComponent } from './components/product/product.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductEditComponent } from './components/product-edit/product-edit.component';
 import { ProductService } from './service/product.service';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ProductCreateComponent } from './components/product-create/product-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     ProductListComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    NavbarComponent,
+    ProductCreateComponent
   ],
   imports: [
     BrowserModule,

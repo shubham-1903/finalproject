@@ -23,4 +23,8 @@ export class ProductService {
     let url = '/api/products'
     return this.http.put(`${url}/${id}`,details)
   }
+  createProduct(productdetails:any){
+    let url = '/api/products'
+    return this.http.post(url,productdetails)
+  }
 }

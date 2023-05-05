@@ -29,6 +29,8 @@ export const getProductByID = async (req,res)=>{
 }
 
 export const createProduct = async(req,res) => {
+    console.log("create product called...")
+    console.log(req.body)
     try {
         const { productid, productname, modelyear, price, description } = req.body;
         const newProduct = new product({ productid, productname, modelyear, price, description });

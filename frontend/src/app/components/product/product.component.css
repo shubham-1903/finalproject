@@ -1,4 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+.main{
+  display: flex;
+}
+.filter{
+  background-color: rgb(224, 214, 201);
+  padding-left: 5px;
+  padding-top: 10px;
+  width: 30%;
+}
+.filter-heading{
+  font-family: 'Bruno Ace SC', cursive;
+}
+.price-heading{
+  font-family: 'Rubik', sans-serif;
+  text-transform: lowercase;
+  margin-bottom: 2px;
+  margin-left: 2px;
+}
+.filter-input{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  gap: 3px;
+}
+.filter-input input{
+  outline: none;
+  border: 1px solid rebeccapurple;
+  background-color: darkgray;
+}
+.filter-input input[type="button"]{
+  background-color: cadetblue;
+  color: azure;
+  padding: 2px;
+  border: none;
+  cursor: pointer;
+}
 .container{
   display: flex;
   flex-wrap: wrap;

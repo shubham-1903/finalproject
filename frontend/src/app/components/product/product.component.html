@@ -1,25 +1,23 @@
-<p>product works!</p>
-<div>
-  <div>Filter</div>
-  <div>Price</div>
-  <div>
-    <input type="text" name="min" id="min" placeholder="$min" #min >
-    <input type="text" name="max" id="max" placeholder="$max" #max >
-    <input type="button" value="GO" (click)="getFilteredProduct(min.value,max.value)">
+<div class="main">
+  <div class="filter">
+    <div class="filter-heading">Filter</div>
+    <div class="price-heading">Price</div>
+    <div class="filter-input">
+      <input type="text" name="min" id="min" placeholder="$min" #min >
+      <input type="text" name="max" id="max" placeholder="$max" #max >
+      <input type="button" value="GO" (click)="getFilteredProduct(min.value,max.value)">
+    </div>
   </div>
-</div>
-<!-- <button (click)="getAllProduct()">GET PRODUCT</button>
-<div *ngFor="let prod of products">
-  {{prod.productname}}
-</div> -->
-<div class="container">
-  <div [id]="'card'" class="card" *ngFor="let prod of products" #card>
-    <div [id]="'img'" class="image"></div>
-    <p [id]="'title'" class="productname">{{prod.productname}}</p>
-    <div [id]="'price'" class="price">{{prod.price}}</div>
-    <div class="button">
-      <button routerLink="/products/show/{{prod.productid}}">Explore</button>
-      <button routerLink="/products/edit/{{prod.productid}}">Edit</button>
+  <div class="container">
+    <div [id]="'card'" class="card" *ngFor="let prod of products" #card>
+      <div [id]="'img'" class="image"></div>
+      <p [id]="'title'" class="productname">{{prod.productname}}</p>
+      <div [id]="'price'" class="price">{{prod.price}}</div>
+      <div class="button">
+        <button routerLink="/products/show/{{prod.productid}}">Explore</button>
+        <button routerLink="/products/edit/{{prod.productid}}">Edit</button>
+      </div>
     </div>
   </div>
 </div>
+

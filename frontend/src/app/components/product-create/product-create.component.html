@@ -1,31 +1,38 @@
-<h1>Product Details</h1>
-<!-- <form (ngSubmit)="onSubmit()" #form="ngForm">
-</form> -->
-
+<h1>Create Product</h1>
 <div class="container">
 
-  <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="form">
+  <form [formGroup]="createForm" (ngSubmit)="onSubmit()" class="form">
+    <div class="form-box">
+      <label for="">product id</label>
+      <input type="text" name="productid" id="productid" formControlName="productid" placeholder="productid"
+      class="input"
+      >
+    </div>
     <div class="form-box">
       <label for="">product name</label>
       <input type="text" name="productname" id="productname" formControlName="productname" placeholder="productname"
-      [value]="productname" class="input"
+      class="input"
       >
     </div>
     <div class="form-box">
       <label for="">price</label>
       <input type="text" name="price" id="price" formControlName="price" placeholder="price" class="input"
-      [value]="price">
+      >
+    </div>
+    <div class="form-box">
+      <label for="">model year</label>
+      <input type="text" name="modelyear" id="modelyear" formControlName="modelyear" placeholder="modelyear"
+      class="input"
+      >
     </div>
     <div class="form-box">
       <label for="">description</label>
       <textarea type="text" name="description" id="description" formControlName="description"
       placeholder="description" class="input"
-      [value]="description" rows="10"></textarea>
+      rows="10"></textarea>
     </div>
     <div>
-      <button type="submit">Edit</button>
+      <button type="submit" [disabled]="!createForm.valid">Create</button>
     </div>
 </form>
 </div>
-
-<!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->

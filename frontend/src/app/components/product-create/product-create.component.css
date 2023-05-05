@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Oxygen&family=Rubik:ital@1&display=swap');
 h1{
   font-family: 'Bruno Ace SC', cursive;
+  text-align: center;
 }
 .container{
   /* background-color: rgb(215, 156, 84); */
   /* margin: 10px; */
   display: flex;
   justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 .form{
   display: flex;
@@ -27,7 +30,7 @@ h1{
 }
 button{
   height: 40px;
-  cursor: pointer;
+  /* cursor: pointer; */
   background-color: aquamarine;
   border: none;
   font-family:'Times New Roman', Times, serif;
@@ -35,7 +38,13 @@ button{
   font-size: large;
   font-stretch: expanded;
   width: 200px;
+  cursor: help;
 }
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
 .form-box{
   display: flex;
   flex-direction: column;
