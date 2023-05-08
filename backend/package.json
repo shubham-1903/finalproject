@@ -14,7 +14,7 @@
     "start": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Shubham Kumar",
   "license": "ISC",
-  "description": ""
+  "description": "This specific folder conatin rest api part of crud operation"
 }
