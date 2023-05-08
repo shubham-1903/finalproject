@@ -5,7 +5,7 @@ import cors from 'cors'
 import bodyParser from 'body-parser'
 import productsRouter from './routes/products.js';
 import { connectDB } from './db/connect.js';
-dotenv.config()
+dotenv.config({path: "./vars/.env"})
 const app = express();
 
 app.use(bodyParser.json());
